@@ -1,0 +1,107 @@
+/* Сброс стилей — вернули на место, без него браузеры рисуют лишние отступы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;               /* был дубль padding — оставили один */
+    background: #FFE5E5;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+nav .tagline {
+    text-transform: none;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+a.button {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: none;
+    transition: opacity 0.2s ease;
+}
+
+a.button:hover {
+    opacity: 0.8;
+}
+
+.hero {
+    background-image: url("../img/fon (2).png");
+    background-size: cover;           /* было background-image: cover — так не работает */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 70vh;                 /* height: 100% не работал без высоты у родителя */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-family: 'Italianno', cursive;
+    font-weight: 400;
+    padding: 0 0 0 80px;
+    font-size: 80px;
+    color: #333;
+}
+
+.hero h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 0 0 30px 80px;
+    font-size: 35px;                  /* 57px перекрывали друг друга с h1 — уменьшил */
+    color: #333;
+}
+
+.hero .hero-button {
+    margin: 0 0 40px 80px;
+    align-self: flex-start;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;   /* для .copirait-contaner это вернули */
+    align-items: center;
+    padding: 20px 32px;
+    background: #FFE5E5;
+    color: #000000;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-info .logo {
+    font-size: 28px;
+}
